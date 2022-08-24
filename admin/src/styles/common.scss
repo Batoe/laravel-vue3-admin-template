@@ -1,0 +1,102 @@
+@import './variable.scss';
+@mixin scrollbar {
+    max-height: 88vh;
+    margin-bottom: 0.5vh;
+    overflow-y: auto;
+  
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      background: transparent;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(144, 147, 153, 0.3);
+      border-radius: 10px;
+    }
+  
+    &::-webkit-scrollbar-thumb:hover {
+      // background-color: rgba(144, 147, 153, 0.3);
+    }
+  }
+  
+  @mixin base-scrollbar {
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: #ddd;
+      background-clip: padding-box;
+      border: 3px solid transparent;
+      border-radius: 7px;
+    }
+  
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  
+    &::-webkit-scrollbar-track:hover {
+      // background-color: #f8fafc;
+    }
+  }
+
+  .icon-hover{
+    cursor: pointer;
+    &:hover {
+      background-color: $base-hover-color;
+    }
+  }
+
+  .i-icon:focus-visible{
+    border: none !important;
+    outline: none !important;
+  }
+
+html {
+  body {
+    @include base-scrollbar;
+    position: relative;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+  }
+  div {
+    @include base-scrollbar;
+  }
+
+  /* 更改进度条颜色 */
+  #nprogress .bar {
+    // z-index: 3000;
+    background: linear-gradient(45deg, #c594c5, #6699cc, #5fb3b3, #99c794, #fac863, #f99157, #ec5f67) !important;
+  }
+}
+
+.x-form {
+  .form-tools {
+    margin-bottom: 16px;
+  }
+
+  .form-header, .form-body, .form-tools, .form-footer {
+    background-color: #ffffff;
+    padding: 16px;
+
+    .form-title {
+      text-align: center;
+      line-height: 36px;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+  }
+
+  .form-body, .form-footer {
+    margin-top: 16px;
+  }
+}
