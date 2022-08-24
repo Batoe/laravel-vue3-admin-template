@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'h5' => cache('weixin.h5') ?: [
+    'h5' => [
 
     ],
-    'mp' => cache('weixin.mp') ?: [
+    'mp' => [
 
     ]
 ];

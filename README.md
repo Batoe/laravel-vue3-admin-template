@@ -3,6 +3,7 @@
 安装依赖
 ```
 composer install
+php artisan jwt:secret
 
 cd ./admin 
 yarn
